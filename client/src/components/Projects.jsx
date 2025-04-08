@@ -12,11 +12,9 @@ const Projects = () => {
             Projects
           </h1>
           <p className="text-slate-500 text-center md:w-[50%] mx-auto">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error quas
-            odit in magni ullam ratione
+            A showcase of projects I have worked on during my academic journey.
           </p>
         </div>
-        {/* Projects Card */}
         <div>
           <ProjectsBox />
         </div>

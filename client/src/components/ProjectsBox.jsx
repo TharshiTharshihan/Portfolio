@@ -1,7 +1,9 @@
 import { FaShoppingCart } from "react-icons/fa";
 import { MdOutlinePhoneAndroid } from "react-icons/md";
 import { HiMiniComputerDesktop } from "react-icons/hi2";
-import { MdSecurity } from "react-icons/md";
+import { FaBlog } from "react-icons/fa";
+
+import { FaUmbrellaBeach } from "react-icons/fa";
 
 const Projects = [
   {
@@ -12,7 +14,6 @@ const Projects = [
       " Customer Shopping Cart",
       "Payment",
     ],
-    image: "https://picsum.photos/200/300",
     icon: <FaShoppingCart className="text-4xl" fill />,
     bgColor: "bg-blue-500/70",
   },
@@ -23,9 +24,8 @@ const Projects = [
       "  Doctor Appointment Schedule",
       "  Patient Appointment booking",
     ],
-    image:
-      "https://www.pexels.com/photo/person-holding-silver-iphone-7-887751/",
-    icon: <MdOutlinePhoneAndroid className="text-4xl" />,
+
+    icon: <MdOutlinePhoneAndroid className="text-4xl" fill />,
     bgColor: "bg-blue-100/10",
   },
   {
@@ -35,8 +35,7 @@ const Projects = [
       " Lecturers Can Upload Pdf ",
       " Students Can View & Download",
     ],
-    image: "https://picsum.photos/200/302",
-    icon: <HiMiniComputerDesktop className="text-4xl" />,
+    icon: <HiMiniComputerDesktop className="text-4xl" fill />,
     bgColor: "bg-fuchsia-500/70",
   },
   {
@@ -47,15 +46,13 @@ const Projects = [
       "Customer - View , Customizaion and Booking Packages",
       "Payment",
     ],
-    image: "https://picsum.photos/200/303",
-    icon: <MdSecurity className="text-4xl" />,
+    icon: <FaUmbrellaBeach className="text-4xl" fill />,
     bgColor: "bg-orange-500/70",
   },
   {
     name: "  Blog site (Next.js)",
     description: [" Create Posts", "  Contact Form"],
-    image: "https://picsum.photos/200/303",
-    icon: <MdSecurity className="text-4xl" />,
+    icon: <FaBlog className="text-4xl" fill />,
     bgColor: "bg-orange-500/70",
   },
 ];
@@ -68,12 +65,12 @@ const ProjectsBox = () => {
           <div
             key={name}
             style={{ backgroundImage: `url(${image})` }}
-            className={`rounded-xl text-white bg-cover bg-no-repeat bg-center bg-blend-overlay hover:scale-105 duration-300 bg-cyan-700`}
+            className={`rounded-xl text-white bg-cover bg-no-repeat bg-center bg-blend-overlay hover:scale-105 duration-300 dark:bg-cyan-900 bg-gray-500 `}
           >
             <div className="p-3 md:p-16 backdrop-blur-sm space-y-3 rounded-xl">
               {icon}
-              <h1 className="text-2xl font-bold">{name}</h1>
-              <p>
+              <h1 className="text-2xl font-bold text-amber-400">{name}</h1>
+              <p className="font-serif">
                 {Array.isArray(description) ? (
                   <ul>
                     {description.map((item, index) => (
