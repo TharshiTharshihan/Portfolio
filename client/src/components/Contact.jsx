@@ -1,11 +1,14 @@
 import emailjs from "@emailjs/browser";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 
 const Contact = () => {
   const form = useRef();
+  const [showNotification, setShowNotification] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const sendEmail = (e) => {
     e.preventDefault();
+    setIsSubmitting(true);
 
     emailjs
       .sendForm("service_fys2epl", "template_j2gsmbi", form.current, {
@@ -13,17 +16,27 @@ const Contact = () => {
       })
       .then(
         () => {
-          alert("Success");
+          // Reset the form fields
+          form.current.reset();
+          // Show success notification
+          setShowNotification(true);
+          // Hide notification after 5 seconds
+          setTimeout(() => {
+            setShowNotification(false);
+          }, 5000);
         },
         (error) => {
           console.log("FAILED...", error.text);
         }
-      );
+      )
+      .finally(() => {
+        setIsSubmitting(false);
+      });
   };
 
   return (
-    <section id="contact" className="bg-white  dark:text-white">
-      <div className="relative flex items-top justify-center min-h-screen bg-white dark:bg-gray-700  sm:items-center sm:pt-0">
+    <section id="contact" className="bg-white dark:text-white">
+      <div className="relative flex items-top justify-center min-h-screen bg-white dark:bg-gray-700 sm:items-center sm:pt-0">
         <div className="max-w-6xl mx-auto sm:px-6 lg:px-8">
           <div className="mt-8 overflow-hidden">
             <div className="grid grid-cols-1 md:grid-cols-2">
@@ -74,74 +87,122 @@ const Contact = () => {
                     <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                   </svg>
                   <div className="ml-4 text-md tracking-wide font-semibold w-40">
-                    <a href="tharshihan2000@gmail.com">
+                    <a href="mailto:tharshihan2000@gmail.com">
                       tharshihan2000@gmail.com
                     </a>
                   </div>
                 </div>
               </div>
 
-              <form
-                className="p-6 flex flex-col justify-center"
-                ref={form}
-                onSubmit={sendEmail}
-              >
-                <div className="flex flex-col">
-                  <label
-                    htmlFor="FirstName"
-                    className="block text-sm font-medium text-primary"
-                  >
-                    Full Name
-                  </label>
-                  <input
-                    type="name"
-                    name="name"
-                    id="name"
-                    placeholder="Full Name"
-                    className="w-100 mt-2 py-3 px-3 rounded-lg bg-white dark:bg-gray-800 dark:text-white border border-gray-400 dark:border-gray-700 text-gray-800 font-semibold focus:border-indigo-500 focus:outline-none"
-                  />
-                </div>
+              <div className="p-6 flex flex-col justify-center relative">
+                {/* Success Notification */}
+                {showNotification && (
+                  <div className="absolute top-0 left-0 right-0 bg-green-500 text-white p-4 rounded-md shadow-md flex items-center justify-between">
+                    <div className="flex items-center">
+                      <svg
+                        className="w-6 h-6 mr-2"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          d="M5 13l4 4L19 7"
+                        />
+                      </svg>
+                      <span className="font-medium">
+                        Message sent successfully!
+                      </span>
+                    </div>
+                    <button
+                      onClick={() => setShowNotification(false)}
+                      className="text-white"
+                    >
+                      <svg
+                        className="w-4 h-4"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          d="M6 18L18 6M6 6l12 12"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                )}
 
-                <div className="flex flex-col mt-2">
-                  <label
-                    htmlFor="FirstName"
-                    className="block text-sm font-medium text-primary"
-                  >
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    name="email"
-                    id="email"
-                    placeholder="Email"
-                    className="w-100 mt-2 py-3 px-3 rounded-lg bg-white dark:bg-gray-800 dark:text-white border border-gray-400 dark:border-gray-700 text-gray-800 font-semibold focus:border-indigo-500 focus:outline-none"
-                  />
-                </div>
-
-                <div className="flex flex-col mt-2">
-                  <label
-                    htmlFor="FirstName"
-                    className="block text-sm font-medium text-primary"
-                  >
-                    Message
-                  </label>
-                  <textarea
-                    type="name"
-                    name="message"
-                    id="tel"
-                    placeholder="Message"
-                    className="w-100 mt-2 py-3 px-3 rounded-lg bg-white dark:bg-gray-800 dark:text-white border border-gray-400 dark:border-gray-700 text-gray-800 font-semibold focus:border-indigo-500 focus:outline-none"
-                  />
-                </div>
-
-                <button
-                  type="submit"
-                  value="Send"
-                  className="md:w-32 bg-primary  text-white font-bold py-3 px-6 rounded-lg mt-3 hover:bg-slate-600 transition ease-in-out duration-300"
+                <form
+                  className="flex flex-col justify-center"
+                  ref={form}
+                  onSubmit={sendEmail}
                 >
-                  Send
-                </button>
-              </form>
+                  <div className="flex flex-col">
+                    <label
+                      htmlFor="name"
+                      className="block text-sm font-medium text-primary"
+                    >
+                      Full Name
+                    </label>
+                    <input
+                      type="text"
+                      name="name"
+                      id="name"
+                      placeholder="Full Name"
+                      className="w-100 mt-2 py-3 px-3 rounded-lg bg-white dark:bg-gray-800 dark:text-white border border-gray-400 dark:border-gray-700 text-gray-800 font-semibold focus:border-indigo-500 focus:outline-none"
+                      required
+                    />
+                  </div>
+
+                  <div className="flex flex-col mt-2">
+                    <label
+                      htmlFor="email"
+                      className="block text-sm font-medium text-primary"
+                    >
+                      Email
+                    </label>
+                    <input
+                      type="email"
+                      name="email"
+                      id="email"
+                      placeholder="Email"
+                      className="w-100 mt-2 py-3 px-3 rounded-lg bg-white dark:bg-gray-800 dark:text-white border border-gray-400 dark:border-gray-700 text-gray-800 font-semibold focus:border-indigo-500 focus:outline-none"
+                      required
+                    />
+                  </div>
+
+                  <div className="flex flex-col mt-2">
+                    <label
+                      htmlFor="message"
+                      className="block text-sm font-medium text-primary"
+                    >
+                      Message
+                    </label>
+                    <textarea
+                      name="message"
+                      id="message"
+                      placeholder="Message"
+                      className="w-100 mt-2 py-3 px-3 rounded-lg bg-white dark:bg-gray-800 dark:text-white border border-gray-400 dark:border-gray-700 text-gray-800 font-semibold focus:border-indigo-500 focus:outline-none"
+                      rows="4"
+                      required
+                    />
+                  </div>
+
+                  <button
+                    type="submit"
+                    value="Send"
+                    disabled={isSubmitting}
+                    className="md:w-32 bg-primary text-white font-bold py-3 px-6 rounded-lg mt-3 hover:bg-slate-600 transition ease-in-out duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                  >
+                    {isSubmitting ? "Sending..." : "Send"}
+                  </button>
+                </form>
+              </div>
             </div>
           </div>
         </div>
