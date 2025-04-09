@@ -42,7 +42,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="bg-white dark:bg-gray-800 dark:text-white">
+      <nav className="bg-white dark:bg-gray-800 dark:text-white sticky top-0 z-10 ">
         <div className="container flex justify-between items-center py-3 sm:py-0">
           <h1 className="text-3xl text-primary font-bold">THARSHIHAN</h1>
           {/* Desktop Menu */}

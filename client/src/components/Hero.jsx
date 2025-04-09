@@ -32,7 +32,8 @@ const Hero = () => {
             <img
               src={personImg}
               alt="It's Me Tharshihan"
-              className="w-auto rounded-full md:max-w-lg mx-auto"
+              className="w-fit h-[500px] rounded-full md:max-w-lg mx-auto"
+              // this height for me.jpeg image
             />
           </div>
         </div>
