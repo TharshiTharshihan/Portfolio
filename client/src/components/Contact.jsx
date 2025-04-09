@@ -89,7 +89,7 @@ const Contact = () => {
                 <div className="flex flex-col">
                   <label
                     htmlFor="FirstName"
-                    className="block text-sm font-medium text-gray-700 dark:text-yellow-300"
+                    className="block text-sm font-medium text-primary"
                   >
                     Full Name
                   </label>
@@ -105,7 +105,7 @@ const Contact = () => {
                 <div className="flex flex-col mt-2">
                   <label
                     htmlFor="FirstName"
-                    className="block text-sm font-medium text-gray-700 dark:text-yellow-300"
+                    className="block text-sm font-medium text-primary"
                   >
                     Email
                   </label>
@@ -121,7 +121,7 @@ const Contact = () => {
                 <div className="flex flex-col mt-2">
                   <label
                     htmlFor="FirstName"
-                    className="block text-sm font-medium text-gray-700 dark:text-yellow-300"
+                    className="block text-sm font-medium text-primary"
                   >
                     Message
                   </label>
@@ -137,7 +137,7 @@ const Contact = () => {
                 <button
                   type="submit"
                   value="Send"
-                  className="md:w-32 bg-indigo-600 hover:bg-blue-dark text-white font-bold py-3 px-6 rounded-lg mt-3 hover:bg-indigo-500 transition ease-in-out duration-300"
+                  className="md:w-32 bg-primary  text-white font-bold py-3 px-6 rounded-lg mt-3 hover:bg-slate-600 transition ease-in-out duration-300"
                 >
                   Send
                 </button>

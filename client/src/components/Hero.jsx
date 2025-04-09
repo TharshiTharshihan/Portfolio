@@ -3,13 +3,13 @@ import personImg from "../assets/profile.jpeg";
 const Hero = () => {
   return (
     <>
-      <main className="w-full bg-secondary dark:bg-gray-500 dark:text-white">
+      <main className="w-full bg-secondary dark:bg-gray-900 dark:text-white">
         <div className="container grid grid-cols-1 sm:grid-cols-2 items-center space-y-2 py-12 sm:py-0 sm:h-[600px]">
           <div>
             <div className="space-y-2 grid justify-items-center sm:justify-items-start">
               <p className="uppercase">Hello</p>
               <p className="text-4xl md:text-6xl font-bold text-black/80 dark:text-white">
-                I'm Tharshihan
+                I&apos;m Tharshihan
               </p>
               <p className="text-3xl text-gray-700 dark:text-white">
                 Full stack Developer & <br /> React Developer

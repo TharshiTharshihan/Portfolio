@@ -13,7 +13,7 @@ const Skills = () => {
               <div className="text-center text-6xl xl:text-8xl font-bold text-black/5 dark:text-gray-700">
                 SKILLS
               </div>
-              <h1 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-3xl md:text-4xl hover:transform hover:scale-105  duration-300 animate-bounce ">
+              <h1 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-3xl text-center md:text-4xl hover:transform hover:scale-105  duration-300 animate-bounce ">
                 Skills
               </h1>
             </div>

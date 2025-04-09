@@ -11,7 +11,7 @@ const Projects = () => {
           <h1 className="inline-block text-3xl text-center font-bold mb-3 border-b-2 border-primary pb-1">
             Projects
           </h1>
-          <p className="text-slate-500 text-center md:w-[50%] mx-auto">
+          <p className="text-slate-500 text-center text-xl md:w-[50%] mx-auto">
             A showcase of projects I have worked on during my academic journey.
           </p>
         </div>
