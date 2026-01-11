@@ -32,6 +32,8 @@ const About = () => {
               </p>
               <div>
                 <a
+                  target="_blank"
+                  rel="noopener noreferrer"
                   href="https://drive.google.com/drive/folders/1rT1UZ8ns3lnTtMcAhs1Jyo0pemy2C3a8"
                   className="primary-btn inline-block my-6 mr-6 hover:bg-slate-600"
                 >
@@ -44,6 +46,8 @@ const About = () => {
                   Contact
                 </a>
                 <a
+                  target="_blank"
+                  rel="noopener noreferrer"
                   href="https://www.linkedin.com/in/tharshihan-r-439653300/"
                   className="outline-btn inline-block ml-6"
                 >

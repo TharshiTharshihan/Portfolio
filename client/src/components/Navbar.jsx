@@ -62,7 +62,7 @@ const Navbar = () => {
               {/* Theme Toggle */}
               {theme === "dark" ? (
                 <BiSolidSun
-                  className="text-2xl dark:text-white"
+                  className="text-2xl cursor-pointer dark:text-white"
                   onClick={() => setTheme("light")}
                 />
               ) : (
@@ -79,7 +79,7 @@ const Navbar = () => {
               {/* Theme Toggle */}
               {theme === "dark" ? (
                 <BiSolidSun
-                  className="text-2xl dark:text-white"
+                  className="text-2xl cursor-pointer dark:text-white"
                   onClick={() => setTheme("light")}
                 />
               ) : (

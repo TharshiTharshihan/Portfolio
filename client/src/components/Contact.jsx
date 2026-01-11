@@ -16,11 +16,9 @@ const Contact = () => {
       })
       .then(
         () => {
-          // Reset the form fields
           form.current.reset();
-          // Show success notification
+
           setShowNotification(true);
-          // Hide notification after 5 seconds
           setTimeout(() => {
             setShowNotification(false);
           }, 5000);

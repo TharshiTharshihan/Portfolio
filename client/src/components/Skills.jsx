@@ -18,14 +18,11 @@ const Skills = () => {
               </h1>
             </div>
             <div className="sm:order-1 text-slate-500 grid grid-cols-2 gap-4">
-              <SkillsLevel skillName="HTML" />
-              <SkillsLevel skillName="CSS" />
-              <SkillsLevel skillName="JavaScript" />
-              <SkillsLevel skillName="Tailwind CSS" />
-              <SkillsLevel skillName="React js" />
-              <SkillsLevel skillName="Next js" />
+              <SkillsLevel skillName="React Js" />
+              <SkillsLevel skillName="Node Js" />
+              <SkillsLevel skillName="Next Js" />
               <SkillsLevel skillName="Angular js" />
-              <SkillsLevel skillName="Node js" />
+              <SkillsLevel skillName="Tailwind CSS" />
               <SkillsLevel skillName="MySQL" />
               <SkillsLevel skillName="PostgreSQL " />
               <SkillsLevel skillName="Docker" />

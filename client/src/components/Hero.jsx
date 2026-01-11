@@ -3,7 +3,7 @@ import personImg from "../assets/profile.jpeg";
 const Hero = () => {
   return (
     <>
-      <main className="w-full bg-secondary dark:bg-gray-900 dark:text-white">
+      <main id="home" className="w-full bg-secondary dark:bg-gray-900 dark:text-white">
         <div className="container grid grid-cols-1 sm:grid-cols-2 items-center space-y-2 py-12 sm:py-0 sm:h-[600px]">
           <div>
             <div className="space-y-2 grid justify-items-center sm:justify-items-start">
@@ -32,7 +32,7 @@ const Hero = () => {
             <img
               src={personImg}
               alt="It's Me Tharshihan"
-              className="w-fit h-[500px] rounded-full md:max-w-lg mx-auto"
+              className="w-auto md:h-[500px] h-[250px] rounded-full md:max-w-lg mx-auto"
               // this height for me.jpeg image
             />
           </div>

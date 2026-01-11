@@ -15,6 +15,16 @@ export default {
           md: "3rem",
         },
       },
+        keyframes: {
+        "whatsapp-blink": {
+          "0%": { transform: "scale(1)", opacity: "1" },
+          "100%": { transform: "scale(1.15)", opacity: "0.8" },
+        },
+      },
+      animation: {
+        "whatsapp-blink": "whatsapp-blink 1s infinite alternate",
+      },
+      
     },
   },
   plugins: [],
