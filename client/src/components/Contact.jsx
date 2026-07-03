@@ -1,5 +1,6 @@
 import emailjs from "@emailjs/browser";
 import { useRef, useState } from "react";
+import { FaEnvelope, FaMapMarkerAlt, FaPhoneAlt } from "react-icons/fa";
 
 const Contact = () => {
   const form = useRef();
@@ -25,7 +26,7 @@ const Contact = () => {
         },
         (error) => {
           console.log("FAILED...", error.text);
-        }
+        },
       )
       .finally(() => {
         setIsSubmitting(false);
@@ -33,69 +34,56 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="bg-white dark:text-white">
-      <div className="relative flex items-top justify-center min-h-screen bg-white dark:bg-gray-700 sm:items-center sm:pt-0">
-        <div className="max-w-6xl mx-auto sm:px-6 lg:px-8">
-          <div className="mt-8 overflow-hidden">
+    <section
+      id="contact"
+      className="bg-[#faf6ef] text-slate-900 dark:bg-slate-900 dark:text-white"
+    >
+      <div className="relative flex min-h-screen items-top justify-center bg-[#faf6ef] sm:items-center sm:pt-0 dark:bg-slate-900">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <div className="mt-8 overflow-hidden rounded-3xl border border-white/70 bg-white/70 shadow-[0_20px_60px_rgba(15,23,42,0.08)] backdrop-blur dark:border-white/10 dark:bg-white/5">
             <div className="grid grid-cols-1 md:grid-cols-2">
-              <div className="p-6 mr-2 bg-gray-100 dark:bg-gray-800 sm:rounded-lg">
-                <h1 className="text-4xl sm:text-5xl text-gray-800 dark:text-white font-extrabold tracking-tight">
+              <div className="p-6 sm:p-10 md:mr-2 md:border-r md:border-slate-200/70 dark:md:border-white/10">
+                <p className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-2 text-sm font-semibold text-primary">
+                  <FaEnvelope />
+                  Contact
+                </p>
+                <h1 className="mt-5 text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white sm:text-5xl">
                   Get in touch
                 </h1>
-                <p className="text-normal text-lg sm:text-2xl font-medium text-gray-600 dark:text-gray-400 mt-2">
-                  Fill in the form to start a conversation
+                <p className="mt-3 text-lg font-medium text-slate-500 dark:text-white/70 sm:text-xl">
+                  Fill in the form to start a conversation.
                 </p>
 
-                <div className="flex items-center mt-8 text-gray-600 dark:text-gray-400">
-                  <svg
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    className="w-8 h-8 text-gray-500"
-                  >
-                    <path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                    <path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                  </svg>
-                  <div className="ml-4 text-md tracking-wide font-semibold w-40">
-                    168,Kovil Road Kalmunai-02.
+                <div className="mt-10 space-y-4 text-slate-600 dark:text-white/70">
+                  <div className="flex items-center gap-4 rounded-2xl bg-slate-50 px-4 py-4 dark:bg-white/5">
+                    <FaMapMarkerAlt className="text-xl text-primary" />
+                    <div className="text-md font-semibold">
+                      168, Kovil Road, Kalmunai-02.
+                    </div>
                   </div>
-                </div>
 
-                <div className="flex items-center mt-4 text-gray-600 dark:text-gray-400">
-                  <svg
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    className="w-8 h-8 text-gray-500"
-                  >
-                    <path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                  </svg>
-                  <div className="ml-4 text-md tracking-wide font-semibold w-40">
-                    <a href="tel:+94758443025"> +94 758443025</a>
+                  <div className="flex items-center gap-4 rounded-2xl bg-slate-50 px-4 py-4 dark:bg-white/5">
+                    <FaPhoneAlt className="text-xl text-primary" />
+                    <div className="text-md font-semibold">
+                      <a href="tel:+94758443025">+94 758443025</a>
+                    </div>
                   </div>
-                </div>
 
-                <div className="flex items-center mt-2 text-gray-600 dark:text-gray-400">
-                  <svg
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    className="w-8 h-8 text-gray-500"
-                  >
-                    <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                  </svg>
-                  <div className="ml-4 text-md tracking-wide font-semibold w-40">
-                    <a href="mailto:tharshihan2000@gmail.com">
-                      tharshihan2000@gmail.com
-                    </a>
+                  <div className="flex items-center gap-4 rounded-2xl bg-slate-50 px-4 py-4 dark:bg-white/5">
+                    <FaEnvelope className="text-xl text-primary" />
+                    <div className="text-md font-semibold">
+                      <a href="mailto:tharshihan2000@gmail.com">
+                        tharshihan2000@gmail.com
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
 
-              <div className="p-6 flex flex-col justify-center relative">
+              <div className="relative flex flex-col justify-center p-6 sm:p-10">
                 {/* Success Notification */}
                 {showNotification && (
-                  <div className="absolute top-0 left-0 right-0 bg-green-500 text-white p-4 rounded-md shadow-md flex items-center justify-between">
+                  <div className="absolute left-0 right-0 top-0 flex items-center justify-between rounded-2xl bg-emerald-500 p-4 text-white shadow-md">
                     <div className="flex items-center">
                       <svg
                         className="w-6 h-6 mr-2"
@@ -152,7 +140,7 @@ const Contact = () => {
                       name="name"
                       id="name"
                       placeholder="Full Name"
-                      className="w-100 mt-2 py-3 px-3 rounded-lg bg-white dark:bg-gray-800 dark:text-white border border-gray-400 dark:border-gray-700 text-gray-800 font-semibold focus:border-indigo-500 focus:outline-none"
+                      className="mt-2 w-100 rounded-2xl border border-slate-200 bg-white/90 px-3 py-3 font-semibold text-slate-800 outline-none transition focus:border-primary dark:border-white/10 dark:bg-slate-800 dark:text-white"
                       required
                     />
                   </div>
@@ -169,7 +157,7 @@ const Contact = () => {
                       name="email"
                       id="email"
                       placeholder="Email"
-                      className="w-100 mt-2 py-3 px-3 rounded-lg bg-white dark:bg-gray-800 dark:text-white border border-gray-400 dark:border-gray-700 text-gray-800 font-semibold focus:border-indigo-500 focus:outline-none"
+                      className="mt-2 w-100 rounded-2xl border border-slate-200 bg-white/90 px-3 py-3 font-semibold text-slate-800 outline-none transition focus:border-primary dark:border-white/10 dark:bg-slate-800 dark:text-white"
                       required
                     />
                   </div>
@@ -185,7 +173,7 @@ const Contact = () => {
                       name="message"
                       id="message"
                       placeholder="Message"
-                      className="w-100 mt-2 py-3 px-3 rounded-lg bg-white dark:bg-gray-800 dark:text-white border border-gray-400 dark:border-gray-700 text-gray-800 font-semibold focus:border-indigo-500 focus:outline-none"
+                      className="mt-2 w-100 rounded-2xl border border-slate-200 bg-white/90 px-3 py-3 font-semibold text-slate-800 outline-none transition focus:border-primary dark:border-white/10 dark:bg-slate-800 dark:text-white"
                       rows="4"
                       required
                     />
@@ -195,7 +183,7 @@ const Contact = () => {
                     type="submit"
                     value="Send"
                     disabled={isSubmitting}
-                    className="md:w-32 bg-primary text-white font-bold py-3 px-6 rounded-lg mt-3 hover:bg-slate-600 transition ease-in-out duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="mt-3 rounded-2xl bg-primary px-6 py-3 font-bold text-white transition duration-300 ease-in-out hover:bg-slate-600 disabled:cursor-not-allowed disabled:opacity-50 md:w-36"
                   >
                     {isSubmitting ? "Sending..." : "Send"}
                   </button>

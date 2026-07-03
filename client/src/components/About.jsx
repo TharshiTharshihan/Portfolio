@@ -1,57 +1,64 @@
+import { FaEnvelope, FaFileAlt, FaLinkedin, FaUserTie } from "react-icons/fa";
+
 const About = () => {
   return (
     <>
       <section
         id="about"
-        className="bg-white dark:bg-slate-800 dark:text-white"
+        className="bg-[#fbf7f0] text-slate-900 dark:bg-slate-800 dark:text-white"
       >
-        <div className="container md:w-[70%] sm:py-16 py-10">
-          <div className="grid items-center gap-4 grid-cols-1 sm:grid-cols-2">
+        <div className="container md:w-[70%] py-14 sm:py-20">
+          <div className="grid items-center gap-8 grid-cols-1 sm:grid-cols-2">
             <div className="relative font-bold">
               <div className="text-center text-6xl xl:text-8xl font-bold text-black/5 dark:text-gray-700">
                 ABOUT
               </div>
-              <h1 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-3xl md:text-4xl hover:transform hover:scale-105  duration-300 ease-in-out text-center text-slate-800 dark:text-white">
-                About me
-              </h1>
+              <div className="absolute top-1/2 left-1/2 flex -translate-x-1/2 -translate-y-1/2 flex-col items-center gap-3 text-center">
+                <span className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-primary text-white shadow-lg shadow-primary/20">
+                  <FaUserTie className="text-xl" />
+                </span>
+                <h1 className="text-3xl md:text-4xl text-slate-800 transition-transform duration-300 hover:scale-105 dark:text-white">
+                  About me
+                </h1>
+              </div>
             </div>
-            <div className="text-slate-400">
-              <p>
-                I am Tharshihan, computer engineering undergraduate at the
-                university of Ruhuna, Sri Lanka. Very predictive individuals
-                with a good academic record with good knowledge. Currently I am
-                looking for an opportunity for my career to utilize my technical
-                skills in a challenging working environment and become an asset
-                to the company that I work for.
-              </p>{" "}
-              <br />
-              <p>
-                I have attached herewith my CV with complete skills and
-                interests. I am looking forward to a favorable response from
-                you.
+            <div className="rounded-3xl border border-white/70 bg-white/80 p-6 text-slate-600 shadow-[0_20px_60px_rgba(15,23,42,0.08)] backdrop-blur dark:border-white/10 dark:bg-white/5 dark:text-white/75 sm:p-8">
+              <p className="leading-relaxed">
+                I am Tharshihan, a computer engineering undergraduate at the
+                University of Ruhuna, Sri Lanka. I enjoy building practical
+                software, learning new tools, and contributing in team
+                environments where I can keep growing technically.
               </p>
-              <div>
+              <p className="mt-4 leading-relaxed">
+                I am currently looking for opportunities where I can use my
+                skills, learn from experienced developers, and add real value to
+                a company through consistent work and a positive mindset.
+              </p>
+              <div className="mt-8 flex flex-wrap gap-3">
                 <a
                   target="_blank"
                   rel="noopener noreferrer"
                   href="https://drive.google.com/drive/folders/1rT1UZ8ns3lnTtMcAhs1Jyo0pemy2C3a8"
-                  className="primary-btn inline-block my-6 mr-6 hover:bg-slate-600"
+                  className="primary-btn inline-flex items-center gap-2 rounded-full px-5 py-3"
                 >
+                  <FaFileAlt />
                   View Resume
                 </a>
                 <a
                   href="tel:+94758443025"
-                  className="outline-btn inline-block "
+                  className="outline-btn inline-flex items-center gap-2 rounded-full px-5 py-3"
                 >
+                  <FaEnvelope />
                   Contact
                 </a>
                 <a
                   target="_blank"
                   rel="noopener noreferrer"
                   href="https://www.linkedin.com/in/tharshihan-r-439653300/"
-                  className="outline-btn inline-block ml-6"
+                  className="outline-btn inline-flex items-center gap-2 rounded-full px-5 py-3"
                 >
-                  Linkedin
+                  <FaLinkedin />
+                  LinkedIn
                 </a>
               </div>
             </div>

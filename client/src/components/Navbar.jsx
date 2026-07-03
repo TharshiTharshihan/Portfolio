@@ -12,6 +12,14 @@ const navMenus = [
     link: "/#about",
   },
   {
+    name: "Experience",
+    link: "/#experience",
+  },
+  {
+    name: "Skills",
+    link: "/#skills",
+  },
+  {
     name: "Projects",
     link: "/#projects",
   },
@@ -23,7 +31,7 @@ const navMenus = [
 const Navbar = () => {
   const [showMenu, setShowMenu] = React.useState(false);
   const [theme, setTheme] = React.useState(
-    localStorage.getItem("theme") ? localStorage.getItem("theme") : "light"
+    localStorage.getItem("theme") ? localStorage.getItem("theme") : "light",
   );
 
   const toggleMenu = () => {
@@ -42,17 +50,17 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="bg-white dark:bg-gray-800 dark:text-white sticky top-0 z-10 ">
-        <div className="container flex justify-between items-center py-3 sm:py-0">
+      <nav className="sticky top-0 z-20 border-b border-slate-200/70 bg-[#f7f1e7]/95 text-slate-800 backdrop-blur dark:border-white/10 dark:bg-slate-900/90 dark:text-white">
+        <div className="container flex items-center justify-between py-3 sm:py-0">
           <h1 className="text-3xl text-primary font-bold">THARSHIHAN</h1>
           {/* Desktop Menu */}
           <div className="hidden sm:block">
-            <ul className="flex items-center gap-4 ">
+            <ul className="flex items-center gap-2 lg:gap-4">
               {navMenus.map((menu) => (
                 <li key={menu.name}>
                   <a
                     href={menu.link}
-                    className="text-xl font-semibold px-2 py-4 md:py-6 inline-block cursor-pointer"
+                    className="inline-block cursor-pointer rounded-full px-3 py-3 text-base font-semibold transition-colors duration-200 hover:bg-white/70 hover:text-primary dark:hover:bg-white/5 md:py-5"
                   >
                     {menu.name}
                   </a>
@@ -62,12 +70,12 @@ const Navbar = () => {
               {/* Theme Toggle */}
               {theme === "dark" ? (
                 <BiSolidSun
-                  className="text-2xl cursor-pointer dark:text-white"
+                  className="cursor-pointer text-2xl dark:text-white"
                   onClick={() => setTheme("light")}
                 />
               ) : (
                 <BiSolidMoon
-                  className="text-2xl cursor-pointer dark:text-white"
+                  className="cursor-pointer text-2xl dark:text-white"
                   onClick={() => setTheme("dark")}
                 />
               )}
@@ -79,29 +87,29 @@ const Navbar = () => {
               {/* Theme Toggle */}
               {theme === "dark" ? (
                 <BiSolidSun
-                  className="text-2xl cursor-pointer dark:text-white"
+                  className="cursor-pointer text-2xl dark:text-white"
                   onClick={() => setTheme("light")}
                 />
               ) : (
                 <BiSolidMoon
-                  className="text-2xl cursor-pointer dark:text-white"
+                  className="cursor-pointer text-2xl dark:text-white"
                   onClick={() => setTheme("dark")}
                 />
               )}
 
               <FiMenu
-                className="text-2xl cursor-pointer dark:text-white"
+                className="cursor-pointer text-2xl dark:text-white"
                 onClick={toggleMenu}
               />
             </div>
             {showMenu && (
-              <div className="fixed top-16 left-0 right-0 bg-white dark:bg-gray-900 dark:text-white shadow-md rounded-b-xl z-10 py-10">
+              <div className="fixed left-0 right-0 top-16 z-10 rounded-b-2xl border-b border-slate-200/60 bg-[#fbf7ef]/98 py-8 shadow-xl dark:border-white/10 dark:bg-slate-950/95">
                 <ul className="flex flex-col items-center gap-4">
                   {navMenus.map((menu) => (
                     <li key={menu.name}>
                       <a
                         href={menu.link}
-                        className="text-xl font-semibold px-2 py-4 md:py-6 inline-block cursor-pointer"
+                        className="inline-block cursor-pointer rounded-full px-4 py-3 text-lg font-semibold transition-colors duration-200 hover:bg-white/70 hover:text-primary dark:hover:bg-white/5"
                       >
                         {menu.name}
                       </a>

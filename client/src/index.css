@@ -2,12 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-[#f7f1e7] text-slate-900 dark:bg-slate-900 dark:text-white;
+  }
+}
+
 @layer components {
   .primary-btn {
-    @apply bg-primary text-white cursor-pointer hover:bg-primary/80 px-4 py-2 rounded-lg my-3;
+    @apply bg-primary text-white cursor-pointer hover:bg-primary/80 px-4 py-2 rounded-full my-3 shadow-sm transition-colors duration-300;
   }
 
   .outline-btn {
-    @apply ring-2 ring-primary inset-0 text-primary cursor-pointer hover:bg-primary hover:text-white px-4 py-2 rounded-lg my-3;
+    @apply ring-2 ring-primary inset-0 text-primary cursor-pointer hover:bg-primary hover:text-white px-4 py-2 rounded-full my-3 transition-colors duration-300;
   }
 }
