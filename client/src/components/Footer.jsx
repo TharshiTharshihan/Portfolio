@@ -6,7 +6,7 @@ const Footer = () => {
       <p className="container flex items-center justify-center gap-2 text-lg">
         Tharshihan &copy; {new Date().getFullYear()}. Connect with me
         <a
-          href="https://www.linkedin.com/in/tharshihan"
+          href="https://www.linkedin.com/in/tharshihan-r-439653300/"
           target="_blank"
           rel="noopener noreferrer"
           className="text-primary transition-colors hover:text-slate-700 dark:hover:text-white"

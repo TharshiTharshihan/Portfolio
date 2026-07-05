@@ -8,9 +8,8 @@ import {
 } from "react-icons/fa";
 import { HiMiniComputerDesktop } from "react-icons/hi2";
 import { MdOutlinePhoneAndroid } from "react-icons/md";
-import { IoDocumentAttach } from "react-icons/io5";
-
-
+import { IoDocumentAttach,IoLibrary  } from "react-icons/io5";
+import { FaTicket  } from "react-icons/fa6";
 import { useState } from "react";
 
 const Projects = [
@@ -29,22 +28,34 @@ const Projects = [
       "https://github.com/TharshiTharshihan/Digital-Asset-Approval-Workflow-System",
   },
   {
-    name: "Health care mobile Application (Flutter)",
-    type: "Mobile App",
+    name: "Ticket Booking System",
+    type: "Live Demo",
     description: [
-      "Role based authentication and authorization using Firebase",
-      "Doctor appointment schedule",
-      "Patient appointment booking",
+      "JWT authentication with Admin,Agent,and User role-based access",
+      "Built ticket creation, assignment, tracking, and management",
+      "Agent communication and resolution of tickets",
     ],
-
-    icon: <MdOutlinePhoneAndroid className="text-3xl text-white" />,
-    accent: "from-emerald-500 to-teal-500",
-        technology: ["Flutter", "Dart", "Firebase"],
-
-    githubUrl: "",
+    icon: <FaTicket className="text-3xl text-white" />,
+    accent: "from-rose-500 to-pink-500",
+    technology: ["React Js", "Springboot","Spring Security", "MySQL"],
+    githubUrl:
+      "https://ticket-booking-blue-seven.vercel.app/",
   },
   {
-    name: "Learning Management System (MERN Stack)",
+    name: "Library Management System Full DevOps Pipeline",
+    type: "Mobile App",
+    description: [
+      " Architected a highly available, scalable application",
+      "Containerized the application with Docker ",
+      "Automated CI/CD pipelines using Jenkins, provisioned AWS EC2 infrastructure",
+    ],
+    icon: <IoLibrary  className="text-3xl text-white" />,
+    accent: "from-emerald-500 to-teal-500",
+    technology: ["Docker", "Jenkins", "AWS"],
+    githubUrl: "https://github.com/TharshiTharshihan/HealthCare",
+  },
+  {
+    name: "Learning Management System ",
     type: "Web Platform",
     description: [
       "Students, Lecturers - Secure Authentication",
@@ -53,10 +64,11 @@ const Projects = [
     ],
     icon: <HiMiniComputerDesktop className="text-3xl text-white" />,
     accent: "from-violet-500 to-fuchsia-500",
-    githubUrl: "",
+    technology: ["React Js", "Node Js","Multer", "MongoDB"],
+    githubUrl: "https://github.com/TharshiTharshihan/student_management",
   },
   {
-    name: "Complete Tourism Booking Management Web Application (MERN Stack)",
+    name: "Complete Tourism Booking Management",
     type: "Web App",
     description: [
       "Role based Authentication and Authorization",
@@ -66,7 +78,23 @@ const Projects = [
     ],
     icon: <FaUmbrellaBeach className="text-3xl text-white" />,
     accent: "from-orange-500 to-amber-500",
-    githubUrl: "",
+        technology: ["React Js", "Node Js","Stripe", "MongoDB"],
+
+    githubUrl: "https://github.com/UmeshaTharindiBandara/Software_Project_Mahaweli_Tours_SriLanka",
+  },
+  {
+    name: "NexBlog–Blog Management Microservices Platform",
+    type: "Micro-services",
+    description: [
+      "Blog Service, Notification Service, and Auth Service microservices  ",
+      " Designedreal time notification delivery pipeline ",
+      " Applied software engineering best practices including modular architecture and API documentation",
+    ],
+    icon: <FaBlog  className="text-3xl text-white" />,
+    accent: "from-sky-500 to-cyan-500",
+    technology: ["React Js", "Node Js","Docker", "Apache Kafka"],
+    githubUrl:
+      "https://github.com/TharshiTharshihan/Digital-Asset-Approval-Workflow-System",
   },
   {
     name: "Blog site (Next.js)",
@@ -74,11 +102,12 @@ const Projects = [
     description: ["Create posts", "Contact form"],
     icon: <FaBlog className="text-3xl text-white" />,
     accent: "from-rose-500 to-pink-500",
-    githubUrl: "",
+    technology: ["Next.js", "Tailwind CSS"],
+    githubUrl: "https://github.com/TharshiTharshihan/next-crudapp",
   },
 
   {
-    name: "E-commerce Web Application (MERN Stack)",
+    name: "E-commerce Web Application",
     type: "Full Stack",
     description: [
       "Role based Authentication and Authorization",
@@ -88,7 +117,8 @@ const Projects = [
     ],
     icon: <FaShoppingCart className="text-3xl text-white" />,
     accent: "from-sky-500 to-cyan-500",
-    githubUrl: "",
+    technology: ["React Js", "Node Js","Stripe", "MongoDB"],
+    githubUrl: "https://github.com/TharshiTharshihan/Shoe-Shop",
   },
   {
     name: "Health care mobile Application (Flutter)",
@@ -98,23 +128,12 @@ const Projects = [
       "Doctor appointment schedule",
       "Patient appointment booking",
     ],
-
     icon: <MdOutlinePhoneAndroid className="text-3xl text-white" />,
     accent: "from-emerald-500 to-teal-500",
-    githubUrl: "",
+    technology: ["Flutter", "Dart", "Firebase"],
+    githubUrl: "https://github.com/TharshiTharshihan/HealthCare",
   },
-  {
-    name: "Learning Management System (MERN Stack)",
-    type: "Web Platform",
-    description: [
-      "Students, Lecturers - Secure Authentication",
-      "Lecturers can upload PDF materials",
-      "Students can view and download",
-    ],
-    icon: <HiMiniComputerDesktop className="text-3xl text-white" />,
-    accent: "from-violet-500 to-fuchsia-500",
-    githubUrl: "",
-  },
+ 
 ];
 
 const ProjectsBox = () => {
@@ -228,7 +247,7 @@ const ProjectsBox = () => {
                   ) : (
                     <span className="inline-flex items-center gap-2 rounded-full bg-slate-100 px-4 py-2 text-sm font-semibold text-slate-700 dark:bg-white/10 dark:text-white/80">
                       <FaGithub className="text-lg" />
-                      Add repo link
+                      Add repo link 
                     </span>
                   )}
                 </div>
