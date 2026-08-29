@@ -121,8 +121,12 @@ const Experience = () => {
                   "React.js",
                   "Node.js",
                   "Express.js",
+                  "Spring Boot",
                   "REST APIs",
                   "JavaScript",
+                  "TypeScript",
+                  "MySQL",
+                  "PostgreSQL",
                   "MongoDB",
                   "Git",
                 ].map((tech) => (

@@ -16,8 +16,8 @@ const navMenus = [
     link: "/#experience",
   },
   {
-    name: "Skills",
-    link: "/#skills",
+    name: " Stack",
+    link: "/#stack",
   },
   {
     name: "Projects",
