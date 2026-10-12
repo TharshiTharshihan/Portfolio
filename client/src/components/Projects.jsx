@@ -6,23 +6,23 @@ const Projects = () => {
     <>
       <section
         id="projects"
-        className="bg-[#f3eee4] py-14 text-slate-900 dark:bg-gray-900 dark:text-white sm:py-20"
+        className="bg-[#f3eee4] py-20 text-slate-900 dark:bg-gray-900 dark:text-white sm:py-28"
       >
         <div className="container flex flex-col items-center">
           <p className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-white/70 px-4 py-2 text-sm font-semibold text-primary shadow-sm backdrop-blur dark:bg-white/5">
             <FaFolderOpen />
-            Projects
+            Featured Work
           </p>
-          <h1 className="mt-4 text-center text-3xl font-bold sm:text-4xl">
-            Selected work and builds
-          </h1>
-          <p className="mx-auto mt-3 text-center text-base text-slate-500 md:w-[55%] sm:text-lg dark:text-white/70">
-            A showcase of projects I have worked on during my academic journey.
+          <h2 className="mt-5 text-center text-3xl font-bold sm:text-5xl">
+            Projects &  <span className="text-primary">builds</span> 
+          </h2>
+          <p className="mx-auto mt-4 max-w-2xl text-center text-base leading-relaxed text-slate-500 dark:text-white/70 sm:text-lg">
+            Full-stack platforms, cloud and DevOps pipelines, AI-powered tools
+            and mobile apps — built with clean architecture and real-world use
+            in mind.
           </p>
         </div>
-        <div>
-          <ProjectsBox />
-        </div>
+        <ProjectsBox />
       </section>
     </>
   );

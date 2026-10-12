@@ -8,7 +8,14 @@
   }
 
   body {
-    @apply bg-[#f7f1e7] text-slate-900 dark:bg-slate-900 dark:text-white;
+    @apply bg-[#f7f1e7] font-sans text-slate-900 antialiased dark:bg-slate-900 dark:text-white;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-heading tracking-[-0.01em];
   }
 }
 
