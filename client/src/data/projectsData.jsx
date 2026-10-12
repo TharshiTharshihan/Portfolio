@@ -42,34 +42,7 @@ export const projectCategories = [
 ];
 
 export const Projects = [
-  {
-    slug: "kafka-avro-order-processing-system",
-    name: "Kafka + Avro Order Processing System",
-    type: "Full-Stack",
-    description: [
-      "Event-driven order processing with Apache Kafka and Avro-serialized messages",
-      "Retry topic with exponential backoff and a Dead Letter Queue for failed orders",
-      "React dashboard with real-time order, revenue and running-average price aggregation",
-    ],
-    icon: <SiApachekafka className="text-3xl text-white" />,
-    accent: "from-slate-700 to-slate-500",
-    technology: ["React Js", "Node Js", "Apache Kafka", "Avro", "MongoDB", "Docker"],
-    githubUrl:
-      "https://github.com/TharshiTharshihan/kafka-order-processing-system",
-    images: kafkaGallery,
-    overview:
-      "A real-time order processing system built with React, Node.js, Express, Apache Kafka, Avro, MongoDB, and Docker. Orders created in the React dashboard are validated by a Node.js REST API and published to Kafka using Avro serialization. A consumer processes each order, storing successful ones in MongoDB and adding them to a running price aggregation. Temporary failures are routed to a retry topic with exponential backoff, and orders that exceed the retry limit are moved to a Dead Letter Queue, persisted in MongoDB, and surfaced on the dashboard.",
-    features: [
-      "Kafka producer and multiple consumers across three topics (orders, retry, DLQ)",
-      "Avro schema-based serialization and deserialization with avsc",
-      "Retry mechanism with exponential backoff and retry event tracking",
-      "Dead Letter Queue with failed-order persistence in MongoDB",
-      "Running average price, total orders and revenue calculation",
-      "React monitoring dashboard with automatic refresh and toast notifications",
-      "Duplicate order protection and error tracking",
-      "Dockerized Kafka infrastructure with Docker Compose",
-    ],
-  },
+  
   {
     slug: "student-qr-mobile-app",
     name: "Student QR Mobile App (React Native)",
@@ -209,6 +182,34 @@ export const Projects = [
       "Real-time notification delivery pipeline via Kafka",
       "Modular architecture with independent deployability",
       "API documentation for each service",
+    ],
+  },
+  {
+    slug: "kafka-avro-order-processing-system",
+    name: "Kafka + Avro Order Processing System",
+    type: "Full-Stack",
+    description: [
+      "Event-driven order processing with Apache Kafka and Avro-serialized messages",
+      "Retry topic with exponential backoff and a Dead Letter Queue for failed orders",
+      "React dashboard with real-time order, revenue and running-average price aggregation",
+    ],
+    icon: <SiApachekafka className="text-3xl text-white" />,
+    accent: "from-slate-700 to-slate-500",
+    technology: ["React Js", "Node Js", "Apache Kafka", "Avro", "MongoDB", "Docker"],
+    githubUrl:
+      "https://github.com/TharshiTharshihan/kafka-order-processing-system",
+    images: kafkaGallery,
+    overview:
+      "A real-time order processing system built with React, Node.js, Express, Apache Kafka, Avro, MongoDB, and Docker. Orders created in the React dashboard are validated by a Node.js REST API and published to Kafka using Avro serialization. A consumer processes each order, storing successful ones in MongoDB and adding them to a running price aggregation. Temporary failures are routed to a retry topic with exponential backoff, and orders that exceed the retry limit are moved to a Dead Letter Queue, persisted in MongoDB, and surfaced on the dashboard.",
+    features: [
+      "Kafka producer and multiple consumers across three topics (orders, retry, DLQ)",
+      "Avro schema-based serialization and deserialization with avsc",
+      "Retry mechanism with exponential backoff and retry event tracking",
+      "Dead Letter Queue with failed-order persistence in MongoDB",
+      "Running average price, total orders and revenue calculation",
+      "React monitoring dashboard with automatic refresh and toast notifications",
+      "Duplicate order protection and error tracking",
+      "Dockerized Kafka infrastructure with Docker Compose",
     ],
   },
   {
